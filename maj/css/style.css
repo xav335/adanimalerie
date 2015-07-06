@@ -1,0 +1,154 @@
+* {font-family:Arial;font-size:8pt;text-decoration:none;}
+form {padding:0;margin:0;}
+//a, a:hover {color:#688FD5;}
+a, a:hover {color:#000000;}
+
+a.lien:hover {color:#688FD5;}
+a.lien {color:#000000;}
+
+a img {border:none;}
+a img.icones {margin:0 3px 0 3px;}
+
+a.amenuleft, a.amenuleftselected {display:block;color:#808080;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #d2e3f3}
+a.amenuleftselected {border-color:#666;display:block;color:black;padding:1px 0 1px 10px;margin-top:1px;background:#83B3DF;}
+a.amenuleft:hover {color:black;border:solid 1px #A9BFE7;background:#BAD5EE;}
+a.amenuleftselected:hover {color:black;}
+
+a.menu_resto_ok {display:block;background-color: #3CF44E;color:#4D7B03;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #4D7B03;}
+a.menu_resto_ok_selected {display:block;background-color: #50DA56;color:black;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #4D7B03;}
+a.menu_resto_ok:hover {display:block;background-color: #50DA56;color:black;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #4D7B03;}
+a.menu_resto_nok {display:block;background-color: #F39632;color:#A15606;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #A15606;}
+a.menu_resto_nok_selected {display:block;background-color: #FA7950;color:black;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #AF330C;}
+a.menu_resto_nok:hover {display:block;background-color: #FA7950;color:black;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #AF330C;}
+
+a.asous_menuleft {display:block;color:#808080;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #F5FFE5;background:#F5FFE5;}
+a.asous_menuleftselected {display:block;color:#000000;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #A5E358;background:#D2F1AB;}
+a.asous_menuleft:hover {border-color:#AAE45B;display:block;color:black;padding:1px 0 1px 10px;margin-top:1px;background:#E4FDC3;}
+
+a.amenuleft_rouge{align:center;display:block;color:#CC3300;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #d2e3f3}
+a.amenuleft_rouge:hover {color:#CC3300;border:solid 1px #CC3300;background:#E19824;}
+
+b.groupmenu {display:block;border-top:solid 1px #A9BFE7;padding-bottom:3px;margin:10px 0 0 2px;}
+span.menu_resto_charge {display:block;background-color: #FA7950;color:#AF330C;text-align: center;padding:1px 0 1px 0px;margin-top:1px;border:solid 1px #AF330C;}
+span.menu_inactif {display:block;color:#B4AFAF;padding:1px 0 1px 10px;margin-top:1px;border:solid 1px #d2e3f3}
+td.titrepage {font-size:12pt; color:#688FD5; border-bottom:solid 1px #E6E6E6; font-weight:bold;}
+
+input.nom_page_manquant {background:#E19824;font-weight:bold;}
+.b {font-weight:bold;}
+.l {text-align:left}
+.c {text-align:center}
+.r {text-align:right}
+.j {text-align:justify;}
+.top {vertical-align:top}
+.middle {vertical-align:middle}
+.bottom {vertical-align:bottom}
+.blue {color:#688FD5;}
+.link , label {cursor:pointer;}
+legend {padding:3px 10px;}
+
+.normal  {
+	font-family: Arial;
+	color: #333333;
+}
+
+.rouge  {
+	font-family: Arial;
+	color: #95030E;
+}
+
+.bleu  {
+	font-family: Arial;
+	color: #1D74C1;
+}
+
+.titre_normal  {
+	font-family: Arial;
+	font-size: 16px;
+	color: #333333;
+}
+
+.titre_rouge  {
+	font-family: Arial;
+	font-size: 16px;
+	color: #95030E;
+}
+
+.titre_bleu  {
+	font-family: Arial;
+	font-size: 6px;
+	color: #1D74C1;
+}
+
+.legende  {
+	font-family: Arial;
+	font-size: 9px;
+	color: #333333;
+}
+
+#div_image_fichier {
+	float :					left;
+	vertical-align :		middle;
+}
+
+#div_image_wait {
+	float :					left;
+	padding-left :			10px;
+	vertical-align :		middle;
+	display :				none;
+}
+
+/*DIV AFFICHAGE ERREUR SAISIE*/
+#erreurdiv {
+	background:#FF8100;color:white;border:solid 1px #666;padding:0 2px;position:absolute;top:0;left:0;display:none;
+}
+
+#conteneur {
+	width: 100%;
+	border: 0px solid blue;
+}
+
+.titre_champ {
+	float: left;
+	vertical-align: middle;
+	width: 160px;
+	min-height: 25px;
+	border: 0px solid red;
+}
+
+.champ_simple {
+	float: left;
+	vertical-align: middle;
+	min-height: 25px;
+	border: 0px solid red;
+}
+
+.champ {
+	float: left;
+	vertical-align: middle;
+	width: 600px;
+	min-height: 25px;
+	border: 0px solid red;
+}
+
+	.champ input {
+		width: 600px;	
+	}
+
+.champ_file {
+	float: left;
+	vertical-align: middle;
+	width: 550px;
+	min-height: 25px;
+	border: 0px solid red;
+}	
+.erreur {
+	border: 2px solid #CC3300;
+}
+
+.bouton {
+	float: right;
+	width: 480px;
+	margin-top: 20px;
+	text-align: right;
+	border: 0px solid red;
+}

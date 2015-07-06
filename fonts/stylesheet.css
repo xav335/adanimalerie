@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LivingstoneRegular';
+    src: url('livingst-webfont.eot');
+    src: url('livingst-webfont.eot?#iefix') format('embedded-opentype'),
+         url('livingst-webfont.woff') format('woff'),
+         url('livingst-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,105 @@
+# -----------------------------------------------
+# COMPRESSION des fichiers
+# -----------------------------------------------
+<IfModule mod_deflate.c>
+	SetOutputFilter DEFLATE
+	AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php
+	# Ne pas mettre en cache si ces fichiers le sont déjà
+	SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip
+</IfModule>
+
+
+# -----------------------------------------------
+# BEGIN Expire headers (Expire à 7 jours)
+# -----------------------------------------------
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 7200 seconds"
+	ExpiresByType image/jpg "access plus 604800 seconds"
+	ExpiresByType image/jpeg "access plus 604800 seconds"
+	ExpiresByType image/png "access plus 604800 seconds"
+	ExpiresByType image/gif "access plus 604800 seconds"
+	AddType image/x-icon .ico
+	ExpiresByType image/ico "access plus 604800 seconds"
+	ExpiresByType image/icon "access plus 604800 seconds"
+	ExpiresByType image/x-icon "access plus 604800 seconds"
+	ExpiresByType text/css "access plus 604800 seconds"
+	ExpiresByType text/javascript "access plus 604800 seconds"
+	ExpiresByType text/html "access plus 7200 seconds"
+	ExpiresByType application/xhtml+xml "access plus 7200 seconds"
+	ExpiresByType application/javascript A259200
+	ExpiresByType application/x-javascript "access plus 604800 seconds"
+	ExpiresByType application/x-shockwave-flash "access plus 604800 seconds"
+</IfModule>
+# END Expire headers
+
+# ------------------------------------------------
+# BEGIN Cache-Control Headers
+# ------------------------------------------------
+<IfModule mod_headers.c>
+	<FilesMatch "\\.(ico|jpe?g|png|gif|swf|css|gz)$">
+		Header set Cache-Control "max-age=604800, public"
+	</FilesMatch>
+	<FilesMatch "\\.(js)$">
+		Header set Cache-Control "max-age=604800, private"
+	</FilesMatch>
+	<filesMatch "\\.(htm)$">
+		Header set Cache-Control "max-age=7200, public"
+	</filesMatch>
+
+	# Disable caching for scripts and other dynamic files
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi|html)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>
+# END Cache-Control Headers
+
+# -------------------------------------------------
+# KILL THEM ETAGS
+# -------------------------------------------------
+FileETag none
+
+RewriteEngine on
+
+# -------------------------------------------------
+# REWRITING 
+# -------------------------------------------------
+RewriteRule ^accueil.html$ /index.php [L]
+RewriteRule ^nos-produits.html$ /produit.php [L]
+RewriteRule ^nos-animaux.html$ /animaux.php [L]
+RewriteRule ^actualite-de-la-boutique.html$ /actualite.php [L]
+RewriteRule ^newsletter.html$ /newsletter.php [L]
+RewriteRule ^espace-client.html$ /mes_commandes.php [L]
+RewriteRule ^paiement-valide.html$ /mes_commandes.php?v=1 [L]
+RewriteRule ^commande-annulee.html$ /mes_commandes.php?a=1 [L]
+RewriteRule ^mot-de-passe-perdu.html$ /mot_de_passe.php [L]
+RewriteRule ^inscription-client.html$ /compte_inscription.php [L]
+RewriteRule ^se-connecter.html$ /se_connecter.php [L]
+RewriteRule ^espace-client-modification.html$ /compte_modification.php [L]
+RewriteRule ^detail-commande-([0-9]+).html$ /commande_detail.php?nc=$1 [L]
+RewriteRule ^mon-panier.html$ /panier.php [L]
+RewriteRule ^mode-de-paiement.html$ /commande_mode_paiement.php [L]
+RewriteRule ^contactez-nous.html$ /contact.php [L]
+
+# -------- Navigation -----------------------------
+RewriteRule ^aquariophilie.html$ /produit.php?n=1 [L]
+RewriteRule ^aquariophilie-page-([0-9]+).html$ /produit.php?n=1&a=&page=$1 [L]
+RewriteRule ^chiens.html$ /produit.php?n=2 [L]
+RewriteRule ^chiens-page-([0-9]+).html$ /produit.php?n=2&a=&page=$1 [L]
+RewriteRule ^oiseaux.html$ /produit.php?n=3 [L]
+RewriteRule ^oiseaux-page-([0-9]+).html$ /produit.php?n=3&a=&page=$1 [L]
+RewriteRule ^terrariophilie.html$ /produit.php?n=4 [L]
+RewriteRule ^terrariophilie-page-([0-9]+).html$ /produit.php?n=4&a=&page=$1 [L]
+RewriteRule ^produit-([0-9]+).html$ /produit.php?n=$1 [L]
+RewriteRule ^produit-([0-9]+)-page-([0-9]+).html$ /produit.php?n=$1&a=&page=$2 [L]
+RewriteRule ^detail-produit-([0-9]+).html$ /produit_detail.php?n=$1 [L]
+RewriteRule ^animal-([0-9]+).html$ /animaux.php?n=$1 [L]
+RewriteRule ^detail-animal-([0-9]+).html$ /animaux_detail.php?n=$1 [L]
+RewriteRule ^ajouter-au-panier-produit-([0-9]+).html$ /panier.php?n=$1 [L]
+RewriteRule ^produit-associe-([0-9]+).html$ /produit.php?pa=$1 [L]
+
+# -------- Règles concernant l'inscription --------
+RewriteRule ^confirm-([0-9a-zA-Z]+).html$ /maj/client/confirm.php?c=$1 [L]
+RewriteRule ^deconnexion.html$ /maj/client/deconnexion.php [L]
+RewriteRule ^connexion.html$ /maj/client/connexion.php [L]
+RewriteRule ^connexion-erreur.html$ /se_connecter.php?err=1 [L]

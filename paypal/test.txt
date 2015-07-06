@@ -1,0 +1,37 @@
+- 20:34:13- Début traitement.
+- 20:34:13- Req : cmd=_notify-validate&mc_gross=10.50&protection_eligibility=Ineligible&address_status=unconfirmed&payer_id=UH53LW83QKQUE&tax=0.00&address_street=Av.+de+la+Pelouse%2C+87648672+Mayet&payment_date=12%3A34%3A09+Oct+29%2C+2012+PDT&payment_status=Completed&charset=windows-1252&address_zip=75002&first_name=Javier&mc_fee=0.61&address_country_code=FR&address_name=Javier+Gonzalez&notify_version=3.7&custom=3%3B10.5&payer_status=verified&business=seller_1350922594_per%40iconeo.fr&address_country=France&address_city=Paris&quantity=1&verify_sign=An5ns1Kso7MWUdW4ErQKJJJ4qi4-AgZBeZMzvh51E-Zusc9NxjDZw8y7&payer_email=buyer_1350923229_per%40iconeo.fr&txn_id=3ED16844WU9921453&payment_type=instant&last_name=Gonzalez&address_state=Alsace&receiver_email=seller_1350922594_per%40iconeo.fr&payment_fee=&receiver_id=FH66W7V7RDRQC&txn_type=web_accept&item_name=Commande+AD+animalerie+Bordeaux&mc_currency=EUR&item_number=&residence_country=FR&test_ipn=1&handling_amount=0.00&transaction_subject=3%3B10.5&payment_gross=&shipping=0.00&ipn_track_id=dda396b3be232
+- 20:34:14- Validation HTTP : OK 
+-> HTTP/1.1 200 OK
+
+-> Date: Mon, 29 Oct 2012 19:34:13 GMT
+
+-> Server: Apache
+
+-> X-Frame-Options: SAMEORIGIN
+
+-> Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=VxN1i-hx5mADc9h0AowgK8o2qRFJpMrv1D_63AgPZzfTauvgqox5NM8yP1OZvCYu8jvJlbi2yWHkGP4ng3fWs_NtPeVLfUQ_SvtD1IUzKcCQb5MLiZNtbiOEulAEb0MviRnvE0%7cnPo1sKR2h8h4djIpAgU1VbQ_F1Llr5RVDkG4376VaRF2tEeWlASi5DtuMCk-8iS8kIy4Vm%7cBiMKST2hZHWyoJXnQFK5_nNGzoKUnrfSgMXokSp3IKWYSzVyIa-wE_s6bZw5MvWL_d1Acm%7c1351539254; domain=.paypal.com; path=/; Secure; HttpOnly
+
+-> Set-Cookie: cookie_check=yes; expires=Thu, 27-Oct-2022 19:34:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+
+-> Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+
+-> Set-Cookie: navlns=0.0; expires=Sun, 24-Oct-2032 19:34:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+
+-> Set-Cookie: Apache=10.72.109.11.1351539253694369; path=/; expires=Wed, 22-Oct-42 19:34:13 GMT
+
+-> Connection: close
+
+-> Content-Type: text/html; charset=UTF-8
+
+-> 
+
+-> VERIFIED
+- 20:34:15- Transaction : OK 
+- 20:34:15- Paiement statut : OK 
+- 20:34:15- Transaction ID : OK 
+- 20:34:15- Compte PayPal : OK 
+- 20:34:151 - num_commande : 3
+- 20:34:152 - requete : 2
+- 20:34:15 ----------- FIN TRAITEMENT ----------- 
+- 20:34:15 - num_erreur = 
+- 20:34:15 - num_commande = 3
